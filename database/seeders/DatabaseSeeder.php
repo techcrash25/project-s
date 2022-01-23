@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
 
 
         // $this->call(RoleSeeder::class);
-        $this->call(UserSeeder::class);
         Course::factory(9)->create();
+        $this->call(UserSeeder::class);
         Cases::factory(7)->create();
     }
 }

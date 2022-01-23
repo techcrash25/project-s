@@ -25,6 +25,13 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password')
         ])/* ->syncRoles(['admin'])*/;
 
-        User::factory(10)->create();
+        $users = User::factory(10)->create();
+
+        foreach ($users as $user) {
+            $user->courses()->attach([
+                rand(1, 4),
+                rand(5, 8),
+            ]);
+        }
     }
 }

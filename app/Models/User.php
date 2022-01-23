@@ -71,7 +71,7 @@ class User extends Authenticatable
     // Relación muchos a muchos
     public function courses()
     {
-        return $this->belongsToMany(Courses::class);
+        return $this->belongsToMany(Course::class);
     }
 
     public function adminlte_image()
