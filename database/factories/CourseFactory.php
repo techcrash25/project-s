@@ -15,7 +15,7 @@ class CourseFactory extends Factory
     {
 
         $name = $this->faker->unique()->word(10);
-        $code = $this->faker->unique()->word('4');
+        $code = $this->faker->unique()->word(4);
         return [
             'name' => $name,
             'code' => $code,
