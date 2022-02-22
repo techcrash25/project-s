@@ -18,17 +18,29 @@
         <thead class="thead-list">
             <tr>
                 <th>#</th>
-                <th>Clase</th>
-                <th>Código</th>
+                <th>Documento</th>
+                <th>Nombre(s)</th>
+                <th>Apellido(s)</th>
+                <th>Telefono</th>
+                <th>Estado</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($courses as $course)
+            @foreach ($students as $student)
             <tr>
-                <td>{{ $course->id}}</td>
-                <td>{{ $course->name}}</td>
-                <td>{{ $course->code}}</td>
+                <td>{{ $student->id}}</td>
+                <td>{{ $student->document}}</td>
+                <td>{{ $student->name}}</td>
+                <td>{{ $student->lastname}}</td>
+                <td>{{ $student->telephone}}</td>
+                <td>
+                    @if ($student->state == '1')
+                        Alentado 
+                    @else
+                         Contagiado
+                    @endif
+                </td>
                 <td>
                     Test
                 </td>

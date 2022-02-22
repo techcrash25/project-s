@@ -7,7 +7,7 @@
             <div class="card">
 
                 <div class="card-body">
-                    <form method="post" action="{{ url('/student')}}" class="form-inline">
+                    <form method="post" action="{{ url('/student/'.$student->document) }}" class="form-inline">
                         @csrf
                         <img src=" {{URL::asset('/images/logo-uts.png')}}" alt="UTS Logo" style="padding-left: 11rem; ">
                         <div class="form-group col-md-6 mx-auto">
@@ -21,6 +21,13 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary mb-2">Continuar</button>
                             </form>
+                            <script>
+                                var msg = '{{Session::get('alert')}}';
+                                var exist = '{{Session::has('alert')}}';
+                                if (exist) {
+                                    alert(msg);
+                                }
+                            </script>
                         </div>
                     </form>
                 </div>
@@ -28,4 +35,5 @@
         </div>
     </div>
 </div>
+
 @endsection
