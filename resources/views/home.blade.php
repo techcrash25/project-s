@@ -30,7 +30,9 @@
                 <td>{{ $course->name}}</td>
                 <td>{{ $course->code}}</td>
                 <td>
-                    Test
+                <a class="btn btn-alert" href="{{ url('/course/'.$course->id.'/edit')}}">
+                <i class="fa fa-clipboard"></i> Ver Listado
+                </a>
                 </td>
             </tr>
             @endforeach

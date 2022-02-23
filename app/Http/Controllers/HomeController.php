@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Course;
 use Illuminate\Http\Request;
-
+use App\Models\User;
 class HomeController extends Controller
 {
     /**
@@ -23,8 +23,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $datos['courses'] = Course::paginate(10);
-        return view('home', $datos);
+        $userId = auth()->id();
+
+        if ($userId == 1) {
+            # code...
+            $datos['courses'] = Course::paginate(10);
+            return view('home', $datos);
+        }else{
+            $datos['courses'] = Course::where('user_id','=',$userId)->get();
+            return view('home', $datos);
+        }
     }
 
 
