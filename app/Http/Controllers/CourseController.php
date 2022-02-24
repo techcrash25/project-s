@@ -34,11 +34,14 @@ class CourseController extends Controller
     public function edit($id)
     {
          $course = Course::findOrFail($id);
-        /*
-        $datos['student'] = DB::table('students')
-        ->leftJoin('course_student', 'student.id', '=', 'course_student.id')
-            ->get(); */
-            $datos['students'] = Student::all();
+         $userId = auth()->id();
+         $datos['students'] = DB::table('students')
+         ->select('students.*')
+        ->join('user_student', function ($join) use ($userId) {
+            $join->on('user_student.student_id','=','students.id' )
+                 ->where('user_student.user_id', '=', $userId¿);
+        })->get();
+
         return view('list',$datos);
     }
 
