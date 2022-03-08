@@ -43,16 +43,21 @@ class CourseController extends Controller
         $userId = auth()->id();
         if ($userId == 1) {
             # code...
-            $datos['students'] = Student::All();
+            $datos['students'] = DB::table('students')
+            ->select('students.*')
+           ->join('course_student', function ($join) use ($course) {
+               $join->on('course_student.student_id','=','students.id' )
+                    ->where('course_student.course_id', '=', $course->id);
+           })->get();;
             return view('list',$datos);
         }else{
             $datos['students'] = DB::table('students')
             ->select('students.*')
-           ->join('user_student', function ($join) use ($userId) {
-               $join->on('user_student.student_id','=','students.id' )
-                    ->where('user_student.user_id', '=', $userId);
-           })->get();
-           return view('list',$datos);
+           ->join('course_student', function ($join) use ($course) {
+               $join->on('course_student.student_id','=','students.id' )
+                    ->where('course_student.course_id', '=', $course->id);
+           })->get();;
+            return view('list',$datos);
         }
     }
 
