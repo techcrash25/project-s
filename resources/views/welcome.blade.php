@@ -10,7 +10,7 @@
                         <img class="card-img" src="{{URL::asset('/images/students.jpg')}}" alt="students" alt="Card image">
                         <div class="card-img-overlay">
                             <br><br>
-                            <h2 class="text-center">Bienvendo al sistema de control, gestión y prevención contra el COVID-19 en las Unidades Técnologicas de Santander</h2>
+                            <h2 class="text-center">Bienvenido al sistema de control, gestión y prevención contra el COVID-19 en las Unidades Tecnológicas de Santander</h2>
                             <br><br>
                             <h4 class="card-text text-center">Antes de ingresar a clases o si en algún momento presentas posibles sintomas de COVID 19, llena la siguiente encuesta
                                 y reporta a la institución para tomar medidas preventivas, el cuidarnos esta en todos nosotros.
@@ -22,147 +22,147 @@
                             <img src="{{URL::asset('/images/uts.png')}}" alt="UTS Logo" width="30%">
                         </div>
                         <br>
-                        <div class="form-group">
-                            <div class="card">
-                                <div class="card-header">
-                                    Primera Pregunta:
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <label for="">¿Siente fiebre, escalofríos como los de una gripe, o una fiebre con una temperatura tomada por la boca de 38,1°C o más?</label>
-                                        <div class="col">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="control" id="si">
-                                                <label class="form-check-label" for="si">Si</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="control" id="no">
-                                                <label class="form-check-label" for="no">No</label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <div class="card">
-                                <div class="card-header">
-                                    Segunda Pregunta:
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <label for="">¿Ha tenido una pérdida repentina del olfato sin congestión nasal (nariz tapada), con o sin pérdida del gusto?</label>
-                                        <div class="col">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="control2" id="si1">
-                                                <label class="form-check-label" for="si">Si</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="control2" id="no1">
-                                                <label class="form-check-label" for="no">No</label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <div class="card">
-                                <div class="card-header">
-                                    Tercera Pregunta:
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <label for="">¿Ha desarrollado una tos o su tos crónica ha empeorado recientemente?</label>
-                                        <div class="col">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="contro3" id="si2">
-                                                <label class="form-check-label" for="si">Si</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="contro3" id="no2">
-                                                <label class="form-check-label" for="no">No</label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <div class="card">
-                                <div class="card-header">
-                                    Cuarta Pregunta:
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <label for="">¿Tiene problemas al respirar o le falta el aliento?</label>
-                                        <div class="col">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="contro4" id="si3">
-                                                <label class="form-check-label" for="si">Si</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="control4" id="no3">
-                                                <label class="form-check-label" for="no">No</label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <div class="card">
-                                <div class="card-header">
-                                    Quinta Pregunta:
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <label for="">¿Tiene dolor de garganta?</label>
-                                        <div class="col">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="control5" id="si4">
-                                                <label class="form-check-label" for="si">Si</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="control5" id="no4">
-                                                <label class="form-check-label" for="no">No</label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <div class="card">
-                                <div class="card-header">
-                                    Sexta Pregunta:
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <label for="">¿Ha estado en contacto estrecho (cercano), sin usar elementos de protección, por más de
-                                            15 minutos con una persona con diagnóstico confirmado de COVID-19?
-                                            o ¿Ha estado compartiendo el mismo lugar por más de 120 minutos con una persona con diagnóstico confirmado de COVID-19?</label>
-                                        <div class="col">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="control6" id="si5">
-                                                <label class="form-check-label" for="si">Si</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="control6" id="no5">
-                                                <label class="form-check-label" for="no">No</label>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <br>
                         <form action="{{ url('/student') }}" method="POST">
+                            <div class="form-group">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Primera Pregunta:
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <label for="">¿Siente fiebre, escalofríos como los de una gripe, o una fiebre con una temperatura tomada por la boca de 38,1°C o más?</label>
+                                            <div class="col">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control" id="si" required>
+                                                    <label class="form-check-label" for="si">Si</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control" id="no">
+                                                    <label class="form-check-label" for="no">No</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Segunda Pregunta:
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <label for="">¿Ha tenido una pérdida repentina del olfato sin congestión nasal (nariz tapada), con o sin pérdida del gusto?</label>
+                                            <div class="col">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control2" id="si1" required>
+                                                    <label class="form-check-label" for="si">Si</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control2" id="no1">
+                                                    <label class="form-check-label" for="no">No</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Tercera Pregunta:
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <label for="">¿Ha desarrollado una tos o su tos crónica ha empeorado recientemente?</label>
+                                            <div class="col">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control3" id="si2" required>
+                                                    <label class="form-check-label" for="si">Si</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control3" id="no2">
+                                                    <label class="form-check-label" for="no">No</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Cuarta Pregunta:
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <label for="">¿Tiene problemas al respirar o le falta el aliento?</label>
+                                            <div class="col">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control4" id="si3" required>
+                                                    <label class="form-check-label" for="si">Si</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control4" id="no3">
+                                                    <label class="form-check-label" for="no">No</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Quinta Pregunta:
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <label for="">¿Tiene dolor de garganta?</label>
+                                            <div class="col">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control5" id="si4" required>
+                                                    <label class="form-check-label" for="si">Si</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control5" id="no4">
+                                                    <label class="form-check-label" for="no">No</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Sexta Pregunta:
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <label for="">¿Ha estado en contacto estrecho (cercano), sin usar elementos de protección, por más de
+                                                15 minutos con una persona con diagnóstico confirmado de COVID-19?
+                                                o ¿Ha estado compartiendo el mismo lugar por más de 120 minutos con una persona con diagnóstico confirmado de COVID-19?</label>
+                                            <div class="col">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control6" id="si5" required>
+                                                    <label class="form-check-label" for="si">Si</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="control6" id="no5">
+                                                    <label class="form-check-label" for="no">No</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br>
                             @csrf
                             <div class="form-group">
                                 <label for="document">Número de documento</label>
@@ -194,10 +194,8 @@
             state = document.getElementById('state');
 
             if (elemento.checked || elemento1.checked || elemento2.checked || elemento3.checked || elemento4.checked || elemento5.checked) {
-                alert('Presentas posibles sintomas de COVID19, porfavor ve a clases virtuales y quedate en casa');
                 document.getElementById('state').value = '2';
             } else {
-                alert('Puedes asistir con regularidad');
                 document.getElementById('state').value = '1';
             }
         }
