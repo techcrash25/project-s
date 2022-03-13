@@ -2,9 +2,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <!-- Favicon -->
+    <link rel="icon" href="{{URL::asset('/images/favicon.png')}}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -16,13 +17,13 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body id="fondo">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -41,7 +42,7 @@
                     @endif
                     @else
                     <ul class="navbar-nav me-auto">
-                        <a class="nav-link" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
+                        <a style="font-size:18px; font-weight:bold;" class="nav-link" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
                     </ul>
                     @endguest
                     <!-- Right Side Of Navbar -->
@@ -55,7 +56,7 @@
                         @endif
 
                         @if (Route::has('register'))
-                        
+
                         @endif
                         @else
 

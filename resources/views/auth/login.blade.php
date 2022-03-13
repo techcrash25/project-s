@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+
+<div class="container" id="container-login">
+    <div class="row justify-content-center align-items-center">
         <div class="col-md-8">
             <div class="card">
 
@@ -69,4 +70,17 @@
         </div>
     </div>
 </div>
+
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0px;
+    }
+
+    .container,
+    .row {
+        height: 100%;
+    }
+</style>
 @endsection

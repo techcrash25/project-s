@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -37,9 +37,9 @@ class StudentController extends Controller
         if ($existencia == $document) {
             $studentData = request()->except(['_token']);
             Student::where('id', '=', $id)->update($studentData);
-            return view('welcome')->with('alert', 'Se esta probando que funciono el covicho');
+            Alert::success('Congrats', 'You\'ve Successfully Registered');
+            return view('welcome');
         } else {
-            $successMsg = 'hi';
             return redirect()->back()->with('alert', 'El documento no se encuentra registrado en el sistema');
         } 
     }

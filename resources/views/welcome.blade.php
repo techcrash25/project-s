@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+@include('sweetalert::alert')
+<div class="container" style="font-size:115%">
+    <div class="row justify-content-center align-items-center">
         <div class="col-md-10">
             <div class="card">
                 <div class="card-body">
@@ -170,8 +171,10 @@
                             </div>
 
                             <br>
-                            <button class="btn btn-outline-success" onclick="contagio()" type="submit">Enviar reporte</button>
-                            <br>
+                            <button class="btn btn-outline-success" onclick="contagio()" type="submit">
+                                <a style="font-size:16px">Enviar reporte</a>
+                            </button>
+                            <br><br>
                         </form>
                     </div>
                 </div>
