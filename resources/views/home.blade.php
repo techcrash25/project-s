@@ -8,11 +8,6 @@
                     <b style="font-size:16px;">{{ __('Listado de Cursos') }}</b>
                 </div>
                 <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
                     <table class="table">
                         <thead>
                             <tr>
