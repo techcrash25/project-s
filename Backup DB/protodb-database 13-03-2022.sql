@@ -115,7 +115,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,7 +124,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2019_08_19_000000_create_failed_jobs_table',1),(4,'2019_12_14_000001_create_personal_access_tokens_table',1),(5,'2022_02_20_160000_create_students_table',1),(6,'2022_02_20_160300_create_courses_table',1),(7,'2022_02_20_171853_create_sessions_table',1),(8,'2022_02_20_174625_create_course_student_table',1),(9,'2022_02_20_203445_create_user_student_table',1);
+INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2019_08_19_000000_create_failed_jobs_table',1),(4,'2019_12_14_000001_create_personal_access_tokens_table',1),(5,'2022_02_20_160000_create_students_table',1),(6,'2022_02_20_160300_create_courses_table',1),(7,'2022_02_20_171853_create_sessions_table',1),(8,'2022_02_20_174625_create_course_student_table',1),(9,'2022_02_20_203445_create_user_student_table',1),(10,'2022_03_15_011200_add_email_to_students_table',2);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -210,7 +210,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('4ngCwOcRrnoFgIdKCfyu0wl4orQJT6grSRlF4unz',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiMWZ0SFZITldqYkJLa0JGb3d1Z0pLU012RVAydU1JRElPUFVBU0tvUiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=',1647187890),('Hpt2SpTPRVxrfkDHKVUwpmGaMk4Ue5aicV4bpCLT',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiQjRYRkFxTG9pSEN2bG55aWU2cWhXZEdRNldhOWpEVWIyVFdwamtEcSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fX0=',1647108747);
+INSERT INTO `sessions` VALUES ('vedjB3EIFqBrOmJjDoa5AE1RRi5qM08t0a4thign',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36','YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMzg2aUFvVldvcm9aaTd4Q05rOERjVmxLYUVwY1RIRm1lR1NobTZkMSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzU6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jb3Vyc2UvMS9lZGl0Ijt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjQ6ImF1dGgiO2E6MTp7czoyMToicGFzc3dvcmRfY29uZmlybWVkX2F0IjtpOjE2NDczMTY5MzE7fX0=',1647317349);
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,12 +227,14 @@ CREATE TABLE `students` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lastname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `telephone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `state` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `students_document_unique` (`document`)
+  UNIQUE KEY `students_document_unique` (`document`),
+  UNIQUE KEY `students_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -242,7 +244,7 @@ CREATE TABLE `students` (
 
 LOCK TABLES `students` WRITE;
 /*!40000 ALTER TABLE `students` DISABLE KEYS */;
-INSERT INTO `students` VALUES (1,'1098000000','Paco Andres','Martinez','3123123123','Cll 1 test ',2,NULL,'2022-02-22 12:18:30'),(2,'1098000001','Paco Andres','Martinez','3123123123','Cll 1 test ',1,NULL,NULL),(3,'1098000002','Marco Antonio','Quezada','321321321','Cll 2 test ',1,NULL,NULL),(4,'1098000003','Miguel','Chacon','321232323','Cll 3 test ',2,NULL,'2022-02-23 07:04:10'),(5,'1098000004','Claudia','Rosas','321322323','Cll 4 test ',1,NULL,NULL),(6,'1098000005','Mikael','Rueda','321322323','Cll 5 test ',1,NULL,NULL),(7,'1098000006','Maicol','Leguizamo','3213223232','Cll 6 test ',1,NULL,NULL),(8,'1098000007','Maria Fernanda','Heredia','3213223232','Cll 7 test ',1,NULL,NULL),(9,'1098000008','Andrea','Granados','323232323','Cll 8 test ',1,NULL,NULL),(10,'1098000009','Paula','Mayorga','12312313123','Cll 9 test ',1,NULL,NULL),(11,'1098000010','Maria','Ochoa','12312313123','Cll 10 test ',1,NULL,NULL);
+INSERT INTO `students` VALUES (1,'1098000000','Paco Andres','Martinez','3123123123','paco.martinez@uts.edu.co','Cll 1 test ',1,NULL,'2022-03-14 00:55:20'),(2,'1098000001','Julio ','Peralta','3123123123','julio.peralta@uts.edu.co','Cll 1 test ',1,NULL,NULL),(3,'1098000002','Marco Antonio','Quezada','321321321','marco.quezada@uts.edu.co','Cll 2 test ',1,NULL,NULL),(4,'1098000003','Miguel','Chacon','321232323','miguel.chacon@uts.edu.co','Cll 3 test ',2,NULL,'2022-02-23 07:04:10'),(5,'1098000004','Claudia','Rosas','321322323','claudia.rosas@uts.edu.co','Cll 4 test ',1,NULL,NULL),(6,'1098000005','Mikael','Rueda','321322323','mikael.rueda@uts.edu.co','Cll 5 test ',1,NULL,NULL),(7,'1098000006','Maicol','Leguizamo','3213223232','maicol.leguizamo@uts.edu.co','Cll 6 test ',1,NULL,NULL),(8,'1098000007','Maria Fernanda','Heredia','3213223232','maria.heredia@uts.edu.co','Cll 7 test ',1,NULL,NULL),(9,'1098000008','Andrea','Granados','323232323','andrea.granados@uts.edu.co','Cll 8 test ',1,NULL,NULL),(10,'1098000009','Paula','Mayorga','12312313123','paula.mayorga@uts.edu.co','Cll 9 test ',1,NULL,NULL),(11,'1098000010','Maria','Ochoa','12312313123','maria.ochoa@uts.edu.co','Cll 10 test ',1,NULL,NULL);
 /*!40000 ALTER TABLE `students` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -321,4 +323,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-13 11:15:39
+-- Dump completed on 2022-03-14 23:12:16
