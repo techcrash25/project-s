@@ -23,7 +23,8 @@
                                     <th class="cell100 column2">Documento</th>
                                     <th class="cell100 column2">Nombre</th>
                                     <th class="cell100 column2">Apellido</th>
-                                    <th class="cell100 column2">Dirección</th>
+                                    <th class="cell100 column4">Correo</th>
+                                    <th class="cell100 column5">Dirección</th>
                                     <th class="cell100 column2">Teléfono</th>
                                     <th class="cell100 column2">Estado</th>
                                 </tr>
@@ -39,14 +40,29 @@
                                     <td class="cell100 column2">{{ $student->document}}</td>
                                     <td class="cell100 column2">{{ $student->name}}</td>
                                     <td class="cell100 column2">{{ $student->lastname}}</td>
-                                    <td class="cell100 column2">{{ $student->address}}</td>
-                                    <td class="cell100 column2">{{ $student->telephone}}</td>
+                                    <td class="cell100 column4">
+                                        <a href="mailto:{{$student->email}}">
+                                            {{ $student->email}}
+                                        </a>
+                                    </td>
+                                    <td class="cell100 column5">{{ $student->address}}</td>
+                                    <td class="cell100 column2">
+                                        <a href="https://wa.me/57{{ $student->telephone}}" target="_blank" style="text-decoration: none; color:black">
+                                            <i style="color:#40DC1D; font-size:20px" class="fa fa-whatsapp" aria-hidden="true"> </i>
+                                            {{ $student->telephone}}
+                                        </a>
+                                    </td>
                                     <td class="cell100 column2">
                                         <b>
                                             @if( $student->state == 2)
-                                            Contagiado
+                                            <a style="color:red">
+                                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ¡Con sintomas!
+                                            </a>
+
                                             @else
-                                            Alentado
+                                            <a style="color:#40DC1D">
+                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i> Sin síntomas
+                                            </a>
                                             @endif
                                         </b>
                                     </td>

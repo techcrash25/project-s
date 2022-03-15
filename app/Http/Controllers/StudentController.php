@@ -6,6 +6,8 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class StudentController extends Controller
 {

@@ -13,16 +13,11 @@
 
 /*//////////////////////////////////////////////////////////////////
   [ RESTYLE TAG ]*/
-* {
+/* * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-
-html {
-    height: 100%;
-    font-family: sans-serif;
-}
+} */
 
 /* ------------------------------------ */
 a {
@@ -187,6 +182,9 @@ td {
 
 .column4 {
     width: 19%;
+    padding-left: auto;
+    text-align: center;
+    align-items: center;
 }
 
 .column5 {

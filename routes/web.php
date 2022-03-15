@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +20,14 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('student', StudentController::class);
 Route::resource('course', CourseController::class);
+Route::get('course/export/{course}', [CourseController::class, 'export']);
+/* Route::get('/mtt/attendance/{id}', [
+    'as' => 'mtt.attendance',
+    'uses' => 'ExcelController@export'
+]); */
 /* Route::resource('course', CourseController::class)->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
