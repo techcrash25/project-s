@@ -8,6 +8,10 @@
                     <h1 class="text-center text-white" style="font-weight: 900;">LISTADO DE CURSOS</h1>
                 </b>
             </div>
+            <br>
+            <a type="button" class="btn btn-outline-light" href="{{ url('/students/export')}}" style="font-size:16px">
+                <i style="font-size:22px" class="fa fa-download" aria-hidden="true"></i>
+                Descargar reporte general</a>
             <br><br>
             <div class="wrap-table100">
                 <div class="table100 ver1 m-b-110">

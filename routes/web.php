@@ -24,6 +24,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('student', StudentController::class);
 Route::resource('course', CourseController::class);
 Route::get('course/export/{course}', [CourseController::class, 'export']);
+Route::get('students/export/', [StudentController::class, 'export']);
 /* Route::get('/mtt/attendance/{id}', [
     'as' => 'mtt.attendance',
     'uses' => 'ExcelController@export'

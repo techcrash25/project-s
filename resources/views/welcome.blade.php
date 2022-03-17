@@ -7,9 +7,9 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card bg-dark text-white">
-                        <img class="card-img" src="{{URL::asset('/images/students.jpg')}}" alt="students" alt="Card image">
+                        <img class="card-img-top" src="{{URL::asset('/images/students.jpg')}}" alt="students" alt="Card image">
                         <div class="card-img-overlay">
-                            <br><br>
+                            <br>
                             <h2 class="text-center">Bienvenido al sistema de control, gestión y prevención contra el COVID-19 en las Unidades Tecnológicas de Santander</h2>
                             <br><br>
                             <h4 class="card-text text-center">Antes de ingresar a clases o si en algún momento presentas posibles sintomas de COVID 19, llena la siguiente encuesta
